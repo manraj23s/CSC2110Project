@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+
 class position {
 private:
 	int column;
