@@ -15,3 +15,4 @@ public:
 	position(int arrow, int acolumn);
 
 };
+
