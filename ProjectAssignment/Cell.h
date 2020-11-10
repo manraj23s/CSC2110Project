@@ -7,16 +7,7 @@ class cell
 private:
     int cellType;
 public:
-    void setCellType(int acellType) 
-    {
-        cellType = acellType;
-    }
-    int getCellType() 
-    {
-        return cellType;
-    }
-    cell()
-    {
-
-    }
+    void setCellType(int acellType);
+    int getCellType();
+    cell();
 };
