@@ -1,18 +1,18 @@
 #include <iostream>
-#include "Cell.h"
-#include "PathFinder.h"
-#include "Position.h"
+#include "cell.h"
+#include "pathFinder.h"
+#include "position.h"
 using namespace std;
 
-void Cell::setCellType(int acellType)
+void cell::setCellType(int acellType)
 {
     cellType = acellType;
 }
-int Cell::getCellType()
+int cell::getCellType()
 {
     return cellType;
 }
-Cell::cell()
+cell::cell()
 {
 
 }

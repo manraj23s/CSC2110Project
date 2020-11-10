@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Cell.h"
-#include "PathFinder.h"
-#include "Position.h"
+#include "cell.h"
+#include "pathFinder.h"
+#include "position.h"
 using namespace std;
 
 void position::setColumn(int acolumn) {
