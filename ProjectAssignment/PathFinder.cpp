@@ -1,5 +1,5 @@
 #include <iostream>
-#include "pathFinder.h"
+#include "PathFinder.h"
 using namespace std;
 
 void pathFinder::search()
