@@ -4,7 +4,7 @@ using namespace std;
 
 #include "position.h"
 
-class pathfinder : public position
+class pathFinder : public position
 {
 private:
 	int* map; //pointer to a bi - dimensional array of cell objects.
@@ -12,5 +12,5 @@ private:
 	void display();
 public:
 	void search();
-	pathfinder(int* pmap, int initialColumn, int initialRow); // CR or RC?
+	pathFinder(int* pmap, int initialColumn, int initialRow); // CR or RC?
 };
