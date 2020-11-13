@@ -9,5 +9,5 @@ private:
 public:
     void setCellType(int acellType);
     int getCellType();
-    cell();
+    cell(int);
 };
