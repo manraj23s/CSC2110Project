@@ -32,5 +32,21 @@ int main()
         }
         cout << endl;
     }
-}
+     
+    int** ptr = new int*;  //first allocate array of row pointers
+    for (int i = 0; i < 5; ++i)
+    {
+        ptr[i] = new int[6]; // allocate memory for columns in each row
+    }
 
+
+    pathFinder obj(*ptr, 1, 0);
+    
+    obj.setRow(1);
+    obj.setColumn(0);
+    cout << obj.getRow();
+    cout << obj.getColumn();
+}
+// Links we should all visit: post here
+// https://www.tutorialspoint.com/cplusplus/cpp_pointer_to_pointer.htm
+// http://www.cplusplus.com/forum/beginner/64451/
