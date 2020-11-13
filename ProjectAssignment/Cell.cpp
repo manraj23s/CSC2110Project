@@ -12,7 +12,7 @@ int cell::getCellType()
 {
     return cellType;
 }
-cell::cell()
+cell::cell(int x =0)
 {
-
+    cellType = x;
 }
