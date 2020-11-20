@@ -12,5 +12,5 @@ private:
 	void display();
 public:
 	void search();
-	pathFinder(int* pmap, int initialColumn, int initialRow); // CR or RC?
+	pathFinder(cell* pmap, int initialColumn, int initialRow); // CR or RC?
 };
