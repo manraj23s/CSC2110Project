@@ -13,11 +13,12 @@ void pathFinder::search()
 
 }
 
-pathFinder::pathFinder(int* pmap, int initialColumn, int initialRow) : currentPosition(initialColumn, initialRow) // CR or RC?
+pathFinder::pathFinder(cell* pmap, int initialColumn, int initialRow) : currentPosition(initialColumn, initialRow) // CR or RC?
 {
 	// Argument: Pointer to bi dimensional array(pmap); initialColumn; initialRow.
 	// Initialize map to pmap.
 	// Initialize currentPosition to initialColumn and initialRow
-	map = pmap;
+	
+	//map = pmap;
 
 }
