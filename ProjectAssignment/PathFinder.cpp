@@ -10,6 +10,30 @@ void pathFinder::search()
 	// (3, 1).
 	// The path can be displayed from initial position to goal; or from goal to
 	// initial position
+	
+	while (map->getCellType() != 2) 
+	{
+		if (map->getCellType() != 1) 
+		{
+			cout << map->getCellType() << endl;
+			map++;
+		}
+		else if (map->getCellType() == 1)
+		{
+			map--;
+			while (map->getCellType() != 2)
+			{
+				map += 6;
+				cout << map->getCellType() << endl;
+			}
+			break;
+		}
+	}
+	cout << currentPosition.getRow();
+	cout << currentPosition.getColumn();
+	//else
+	//	cout << "Goal" << endl;
+
 
 }
 
@@ -19,6 +43,6 @@ pathFinder::pathFinder(cell* pmap, int initialColumn, int initialRow) : currentP
 	// Initialize map to pmap.
 	// Initialize currentPosition to initialColumn and initialRow
 	
-	//map = pmap;
+	map = pmap;
 
 }
