@@ -14,7 +14,24 @@ using namespace std;
 
 int main()
 {
-     //cell object new bi-dimensional array
+     {
+	int array[3][3] = {
+	{1,2,3},
+	{4,5,6},
+	{7,8,9}};
+
+	int* ptrBA;
+	ptrBA = &array[1][0];
+	//n*columnsize+m
+	cout << *ptrBA << endl;
+	cout << *(ptrBA + 3) << endl;
+	cout << *(ptrBA - 3) << endl; //probably for printing 1
+
+
+
+
+	cout << endl << endl << endl;
+    //cell object new bi-dimensional array
     cell bArray[5][6] = { 
         {cell(1),cell(1),cell(1),cell(1),cell(1),cell(1)}, 
         {cell(0),cell(0),cell(0),cell(0),cell(0),cell(1)},
@@ -32,20 +49,14 @@ int main()
         }
         cout << endl;
     }
-     
-    int** ptr = new int*;  //first allocate array of row pointers
-    for (int i = 0; i < 5; ++i)
-    {
-        ptr[i] = new int[6]; // allocate memory for columns in each row
-    }
 
+    cell* ptr;
+    ptr = &bArray[1][0];
+    //cout << ptr->getCellType() << endl;
 
-    pathFinder obj(*ptr, 1, 0);
-    
-    obj.setRow(1);
-    obj.setColumn(0);
-    cout << obj.getRow();
-    cout << obj.getColumn();
+    pathFinder pf1(ptr, 1, 0);
+    pf1.search();
+          
 }
 // Links we should all visit: post here
 // https://www.tutorialspoint.com/cplusplus/cpp_pointer_to_pointer.htm
