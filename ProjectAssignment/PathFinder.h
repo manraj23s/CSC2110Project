@@ -1,16 +1,18 @@
 #pragma once
 #include <iostream>
-using namespace std;
-
 #include "position.h"
+#include "cell.h"
+#include <vector>
+using namespace std;
 
 class pathFinder : public position
 {
 private:
-	int* map; //pointer to a bi - dimensional array of cell objects.
+	cell* map;
 	position currentPosition;
-	void display();
+	// void display();
 public:
 	void search();
-	pathFinder(cell* pmap, int initialColumn, int initialRow); // CR or RC?
+	bool dfs(position *p, int, int, vector<string>& v);
+	pathFinder(cell* pmap, int initialRow, int initialColumn); 
 };
