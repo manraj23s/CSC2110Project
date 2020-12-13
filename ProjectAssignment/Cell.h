@@ -1,13 +1,11 @@
 #pragma once
-#include <iostream>
-using namespace std;
 
 class cell 
 {
 private:
     int cellType;
 public:
-    void setCellType(int acellType);
+    void setCellType(int);
     int getCellType();
     cell(int);
 };
