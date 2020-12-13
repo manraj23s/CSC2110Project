@@ -1,20 +1,23 @@
-// Project assignment.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// TEAM 3
+// AZHARUL TAMBIR
+// RIDHIMA PHATAK
+// MANRAJ SINGH
+// SHURAYA CHOUDHURY
+// ASHVIN ADAPA
 
-#include "cell.h"
 #include "pathFinder.h"
-#include "position.h"
 
 int main()
 {
-    //cell object new bi-dimensional array
+    // bi-dimensional array of cell objects
     cell fullMap[5][6] = { 
-        {cell(1),cell(1),cell(1),cell(0),cell(1),cell(1)}, 
-        {cell(1),cell(0),cell(0),cell(0),cell(0),cell(0)},
-        {cell(0),cell(0),cell(1),cell(0),cell(1),cell(0)},
-        {cell(0),cell(1),cell(1),cell(0),cell(1),cell(2)},
-        {cell(1),cell(1),cell(1),cell(1),cell(1),cell(1)} };
+        {cell(0),cell(0),cell(0),cell(0),cell(0),cell(0)}, 
+        {cell(0),cell(0),cell(1),cell(0),cell(1),cell(1)},
+        {cell(0),cell(1),cell(0),cell(0),cell(0),cell(1)},
+        {cell(1),cell(0),cell(0),cell(0),cell(0),cell(1)},
+        {cell(1),cell(0),cell(2),cell(1),cell(0),cell(1)} };
 
-    pathFinder pF(&fullMap[0][0], 1, 4); // fix this 
+    cell* ptr = &fullMap[0][0]; 
+    pathFinder pF(ptr, 4, 4); // Enter the initial position (row then column) here.
     pF.search();
 }
